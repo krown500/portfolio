@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>معاينة المشروع</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --background-color: #f4f4f4;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Cairo", sans-serif;
+      }
+
+      body {
+        background-color: var(--background-color);
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      .preview-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .preview-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .back-btn {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .images-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .image-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .image-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .image-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .fullscreen-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .fullscreen-image {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      .project-description {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        line-height: 1.8;
+      }
+
+      .project-description h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .project-description p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-container">
+      <div class="preview-header">
+        <h1>معاينة المشروع</h1>
+        <a href="/" class="back-btn">
+          <i class="fas fa-arrow-right"></i>
+          العودة للرئيسية
+        </a>
+      </div>
+
+      <div class="project-description" id="projectDescription"></div>
+
+      <div class="images-grid" id="imagesGrid"></div>
+    </div>
+
+    <div
+      class="fullscreen-overlay"
+      id="fullscreenOverlay"
+      style="display: none"
+    >
+      <i class="fas fa-times close-btn" id="closeBtn"></i>
+      <img
+        src=""
+        alt="صورة بالحجم الكامل"
+        class="fullscreen-image"
+        id="fullscreenImage"
+      />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        const projectId = new URLSearchParams(window.location.search).get("id");
+        const projectDescription =
+          document.getElementById("projectDescription");
+        const imagesGrid = document.getElementById("imagesGrid");
+        const fullscreenOverlay = document.getElementById("fullscreenOverlay");
+        const fullscreenImage = document.getElementById("fullscreenImage");
+        const closeBtn = document.getElementById("closeBtn");
+
+        switch (projectId) {
+          case "1":
+            projectDescription.innerHTML = `
+              <h2>منصة تعليمية تفاعلية</h2>
+              <p>المشروع يطبق نظام مكافآت متقدم حيث تختلف الجائزة بناءً على مستوى الفيديو للمستخدم عند إكمال المشاهدة. يتم اختبار المستخدم من خلال مجموعة من الأسئلة لتطبيق ما تعلمه، وعند اجتياز الاختبار يتم فتح الفيديو التعليمي التالي. هذا النظام يضمن التعلم بطريقة ممتعة وفعالة مع تحفيز مستمر للمستخدم.</p>
+              <div class="technologies" style="margin-top: 1rem;">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            `;
+            break;
+          case "2":
+            projectDescription.innerHTML = `
+              <h2>نظام إدارة طلبات الموردين</h2>
+              <p>نظام متكامل لإدارة طلبات الموردين يتيح إضافة الشركات ومجموعاتها، مع إمكانية إضافة منتجات لكل مجموعة. يدعم النظام خاصية الباركود QR وطباعة الجداول والصفحات وتصديرها بصيغ متعددة (PDF, WORD, EXCEL). كما يتيح استيراد المنتجات لتحديث الجدول مع تتبع كامل للمخزون والتقارير اليومية والإحصائيات.</p>
+            `;
+            break;
+        }
+
+        try {
+          const response = await fetch(`/api/project-images/${projectId}`);
+          const data = await response.json();
+
+          data.images.forEach((imagePath) => {
+            const imageCard = document.createElement("div");
+            imageCard.className = "image-card";
+
+            const img = document.createElement("img");
+            img.src = imagePath;
+            img.alt = "صورة المشروع";
+
+            imageCard.appendChild(img);
+            imagesGrid.appendChild(imageCard);
+
+            // إضافة خاصية التكبير عند الضغط
+            imageCard.addEventListener("click", () => {
+              fullscreenImage.src = imagePath;
+              fullscreenOverlay.style.display = "flex";
+            });
+          });
+        } catch (error) {
+          console.error("Error:", error);
+        }
+
+        // إغلاق الصورة المكبرة
+        closeBtn.addEventListener("click", () => {
+          fullscreenOverlay.style.display = "none";
+        });
+
+        // إغلاق الصورة عند الضغط خارجها
+        fullscreenOverlay.addEventListener("click", (e) => {
+          if (e.target === fullscreenOverlay) {
+            fullscreenOverlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بورتفوليو احترافي</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">عني</a></li>
+          <li><a href="#projects">المشاريع</a></li>
+          <li><a href="#skills">المهارات</a></li>
+          <li><a href="#contact">اتصل بي</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>عمر أنيس</h1>
+          <div class="typing-text">
+            <span class="highlight">مطور ويب متكامل</span>
+          </div>
+          <p class="hero-description">
+            متخصص في تطوير تطبيقات الويب المتكاملة باستخدام:
+          </p>
+          <div class="tech-stack">
+            <span class="tech-item">PHP</span>
+            <span class="tech-item">Laravel</span>
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">Express</span>
+            <span class="tech-item">MySQL</span>
+          </div>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">معرض أعمالي</a>
+            <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>نبذة عني</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-header">
+              <h3>مطور ويب متكامل</h3>
+              <p class="about-subtitle">
+                متخصص في تطوير حلول ويب مبتكرة وفعالة
+              </p>
+            </div>
+            <div class="about-description">
+              <p>
+                مرحباً! أنا مطور ويب شغوف بتحويل الأفكار إلى تطبيقات ويب متكاملة
+                وعالية الأداء. أجمع بين خبرتي في تطوير الواجهات الأمامية
+                والخلفية لتقديم حلول شاملة ومتكاملة.
+              </p>
+            </div>
+            <div class="expertise-areas">
+              <h4>مجالات الخبرة:</h4>
+              <ul class="skills-list">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <strong>تطوير الواجهات الخلفية:</strong> PHP/Laravel و
+                  Node.js/Express لبناء خدمات قوية وقابلة للتطوير
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <strong>قواعد البيانات:</strong> تصميم وإدارة قواعد البيانات
+                  باستخدام MySQL
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <strong>واجهات المستخدم:</strong> تطوير واجهات تفاعلية
+                  باستخدام HTML5, CSS3, و JavaScript
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <strong>API:</strong> تصميم وتطوير REST APIs متكاملة وآمنة
+                </li>
+              </ul>
+            </div>
+            <div class="about-footer">
+              <p>
+                أؤمن بأهمية التعلم المستمر ومواكبة أحدث التقنيات في مجال تطوير
+                الويب، مع التركيز على تقديم حلول عالية الجودة تلبي احتياجات
+                العملاء.
+              </p>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-circle">
+                <span class="stat-number">+2</span>
+              </div>
+              <span class="stat-text">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <div class="stat-circle">
+                <span class="stat-number">+15</span>
+              </div>
+              <span class="stat-text">مشروع منجز</span>
+            </div>
+            <div class="stat">
+              <div class="stat-circle">
+                <span class="stat-number">+8</span>
+              </div>
+              <span class="stat-text">عميل سعيد</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-header">
+          <h2>مشاريعي</h2>
+          <p class="section-description">مجموعة مختارة من أحدث مشاريعي</p>
+        </div>
+
+        <div class="projects-container">
+          <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="web">تطبيقات الويب</button>
+            <button class="filter-btn" data-filter="api">REST API</button>
+            <button class="filter-btn" data-filter="database">
+              قواعد البيانات
+            </button>
+          </div>
+
+          <div class="projects-grid">
+            <!-- المشروع الأول -->
+            <div class="project-card" data-category="web">
+              <img src="images/1.png" alt="نظام إدارة المهام" />
+              <div class="project-content">
+                <h3>نظام إدارة المهام</h3>
+                <p>
+                  تطبيق ويب متكامل لإدارة المهام والمشاريع مع واجهة مستخدم
+                  تفاعلية
+                </p>
+                <div class="technologies">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-btn preview-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> معاينة
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- المشروع الثاني -->
+            <div class="project-card" data-category="api">
+              <img src="images/2.png" alt="واجهة برمجة RESTful" />
+              <div class="project-content">
+                <h3>واجهة برمجة RESTful</h3>
+                <p>تطوير API متكامل لخدمات التجارة الإلكترونية مع توثيق شامل</p>
+                <div class="technologies">
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">JWT</span>
+                  <span class="tech-tag">Swagger</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-btn preview-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> معاينة
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- المشروع الثالث -->
+            <div class="project-card" data-category="database">
+              <img src="images/3.png" alt="Turbo AI CLI" />
+              <div class="project-content">
+                <h3>Turbo AI CLI</h3>
+                <p>
+                  نموذج ذكاء اصطناعي مفتوح المصدر يدعم جميع المجالات والمحادثات،
+                  مصمم للإجابة على الأسئلة المختلفة بكفاءة عالية وذكاء فائق، مما
+                  يجعله أداة قوية للتفاعل والمساعدة في شتى المجالات
+                </p>
+                <div class="technologies">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OpenAI API</span>
+                  <span class="tech-tag">Click</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-btn preview-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> معاينة
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-header">
+          <h2>مهاراتي</h2>
+          <p class="section-description">
+            المهارات التقنية والأدوات التي أتقنها
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-laptop-code"></i>
+              <h3>تطوير الواجهة الأمامية</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CSS3</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-server"></i>
+              <h3>تطوير الخادم</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PHP</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Laravel</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Express.js</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-database"></i>
+              <h3>قواعد البيانات</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-header">
+          <h2>اتصل بي</h2>
+          <p class="section-description">دعنا نتحدث عن مشروعك القادم</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="info-header">
+              <i class="fas fa-paper-plane"></i>
+              <h3>معلومات التواصل</h3>
+            </div>
+
+            <div class="info-content">
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div class="info-details">
+                  <h4>البريد الإلكتروني</h4>
+                  <span>Omarashraf.w2@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div class="info-details">
+                  <h4>رقم الهاتف</h4>
+                  <span dir="ltr">+20 1205608637</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fab fa-whatsapp"></i>
+                <div class="info-details">
+                  <h4>واتساب</h4>
+                  <span dir="ltr">+20 1020710178</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-details">
+                  <h4>الموقع</h4>
+                  <span>مصر</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="whatsapp-float">
+              <a
+                href="https://wa.me/201020710178"
+                target="_blank"
+                class="whatsapp-btn"
+              >
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">تواصل معي على واتساب</span>
+              </a>
+            </div>
+
+            <div class="social-links">
+              <h4>تابعني على</h4>
+              <div class="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/omar-ashraf-syntax/"
+                  target="_blank"
+                  class="social-icon"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-header">
+              <i class="fas fa-envelope-open-text"></i>
+              <h3>أرسل رسالة</h3>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">الاسم</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">الموضوع</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">الرسالة</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i>
+              إرسال الرسالة
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>جميع الحقوق محفوظة &copy; 2024</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
